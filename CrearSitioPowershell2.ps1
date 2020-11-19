@@ -1,14 +1,14 @@
-# Utilizar la versión del ISO no x86
+# Utilizar la version del ISO no x86
 $QueNombreSitio = "pru06"
 $QueZona        ="domi.com"
 $QueIP          = "2001::115"
-#No tocar nada de aquí para abajo
+#No tocar nada de aqui para abajo
 $QueSitio       = "$QueNombreSitio.$QueZona"
 $QueRuta        = "w:\www\$QueSitio\$QueSitio"
 $QuePuerto      = 80
 
 
-#Añade un registro DNS
+#Crea un registro DNS
 Add-DnsServerResourceRecordAAAA -IPv6Address $QueIP -Name $QueNombreSitio -ZoneName $QueZona  -ComputerName 172.20.140.254
 
 # Crea las carpetas, un archivo de inicio, el grupo de aplicaciones y el sitio.
